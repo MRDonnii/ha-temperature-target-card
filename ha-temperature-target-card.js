@@ -1,8 +1,10 @@
-const VERSION = "0.1.0";
+import "./ha-card-list-editor.js";
+const VERSION = "0.2.0";
 
 class HATemperatureTargetCard extends HTMLElement {
   constructor(){super();this.attachShadow({mode:"open"});this._config={};this._hass=undefined;this._signature="";this._history={};this._loading=false;this._timer=undefined;}
   static getStubConfig(){return{title:"Temperaturer",rooms:[]};}
+  static getConfigElement(){const e=document.createElement("ha-card-list-editor");e.definition={roots:[{key:"title",label:"Titel"},{key:"hours",label:"Historik i timer",type:"number",min:1,max:168},{key:"animation",label:"Animation",type:"boolean"}],collections:[{key:"rooms",label:"Rum",itemLabel:"rum",defaults:{name:"Nyt rum",icon:"mdi:thermometer"},fields:[{key:"name",label:"Navn"},{key:"icon",label:"Ikon"},{key:"temperature",label:"Temperatur",type:"entity"},{key:"climate",label:"Termostat",type:"entity"}]}]};return e;}
   setConfig(config){if(!config||!Array.isArray(config.rooms))throw new Error("Temperaturkortet kræver en rooms-liste");this._config={title:"Temperaturer & setpunkter",hours:24,animation:true,...config};this._signature="";this._render();this._requestHistory();}
   connectedCallback(){this._requestHistory();if(!this._timer)this._timer=setInterval(()=>this._fetchHistory(),300000);}
   disconnectedCallback(){clearInterval(this._timer);this._timer=undefined;}

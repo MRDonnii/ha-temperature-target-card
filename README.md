@@ -7,6 +7,8 @@ a graph whose line color shifts around the thermostat's current target —
 orange above target, green on target, blue below — plus a live readout of
 current temperature, setpoint and deviation.
 
+The visual card editor provides entity pickers and add/remove controls for rooms.
+
 Works with a plain temperature sensor alone (as a history-only graph), or
 paired with a `climate` entity for a live target line, heating-status
 detection, and a link to the thermostat's more-info dialog.
