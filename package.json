@@ -1,0 +1,24 @@
+{
+  "name": "ha-temperature-target-card",
+  "version": "0.1.0",
+  "description": "Home Assistant Lovelace card: room temperature history graphs that shift color around each thermostat's target.",
+  "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/MRDonnii/ha-temperature-target-card.git"
+  },
+  "keywords": [
+    "home-assistant",
+    "home-assistant-card",
+    "custom-card",
+    "lovelace",
+    "lovelace-card",
+    "dashboard",
+    "temperature",
+    "climate",
+    "thermostat",
+    "history"
+  ],
+  "author": "John Thorn Halle",
+  "license": "MIT"
+}
