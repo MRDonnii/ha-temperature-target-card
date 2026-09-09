@@ -1,6 +1,6 @@
 {
   "name": "ha-temperature-target-card",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Home Assistant Lovelace card: room temperature history graphs that shift color around each thermostat's target.",
   "type": "module",
   "repository": {
