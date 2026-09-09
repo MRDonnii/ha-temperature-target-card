@@ -2,6 +2,9 @@
 
 ![Preview](docs/preview.png)
 
+> HACS installs both JavaScript files automatically. For a manual installation,
+> copy `ha-temperature-target-card.js` and `ha-card-list-editor.js` into the same folder.
+
 A Home Assistant Lovelace card that shows each room's temperature history as
 a graph whose line color shifts around the thermostat's current target —
 orange above target, green on target, blue below — plus a live readout of
